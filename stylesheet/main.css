@@ -1,0 +1,190 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 20px;
+  background-image: linear-gradient(to bottom, #a7acf6, #bdbff8, #d2d3fb, #e7e7fc, #fbfbfe);
+  background-repeat: no-repeat;
+  border: 5px solid red;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+#header-banner {
+  background-color: red;
+  color: #fff;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+#header-banner .sub-header {
+  height: 50px;
+  background-color: #215073;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  text-align: center;
+}
+
+#main-container {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+}
+
+#main-container .product-img {
+  width: 70%;
+  padding-top: 20px;
+}
+
+#main-container .product-description {
+  width: 100%;
+  padding: 25px;
+}
+
+#main-container .product-description .prod-title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  justify-content: space-between;
+  color: #215073;
+  font-weight: bold;
+}
+
+#main-container .product-description .prd-details {
+  color: #363636;
+  padding: 10px 0 0 40px;
+}
+
+#order-details {
+  margin-top: 20px!important;
+  text-align: center;
+  
+}
+
+#order-details .order-code {
+  font-size: 20px;
+  color: #626262;
+}
+
+#order-details .order-button > button {
+  width: 150px;
+  background-color: red;
+  border: 5px solid yellow;
+  border-radius: 50px;
+  color: #fff;
+  padding: 8px;
+  margin: 5px!important;
+  line-height: 17.5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#order-details > div.order-button > button > span {
+  font-size: 25px;
+}
+
+#order-details .order-tax {
+  color: #626262;
+}
+
+footer {
+  height: 25px;
+  background-color: #a9a9a9;
+
+}
+
+@media only screen and (max-width: 600px) {
+  #main-container {
+    flex-direction: column;
+  }
+
+  #main-container .product-img {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #header-banner > header > div.head-title {
+    font-size: 20px !important;
+    line-height: 30px;
+  }
+
+}
